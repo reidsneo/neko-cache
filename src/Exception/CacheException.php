@@ -12,8 +12,13 @@ declare(strict_types=1);
 
 namespace Neko\Cache\Exception;
 
-use Neko\Cache\CacheException as CacheExceptionInterface;
 use Exception;
+
+
+interface CacheExceptionInterface
+{
+    
+}
 
 class CacheException extends Exception implements CacheExceptionInterface
 {

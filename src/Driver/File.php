@@ -37,7 +37,7 @@ class File extends CacheProvider
      *
      * @var string
      */
-    protected $storage = '/tmp/simple-cache';
+    protected $storage = '/tmp/cache';
 
     /**
      * Constructor.
@@ -181,6 +181,6 @@ class File extends CacheProvider
      */
     private function getFilePath(string $key): string
     {
-        return $this->storage . '/' . $key . '.cache';
+        return str_replace("/", DS, $this->storage . '/' . $key . '.cache');
     }
 }
